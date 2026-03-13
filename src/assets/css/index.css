@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+:root {
+  --color-green: #40916c;
+
+  --color-bg-surface: #ffffff;
+  --color-bg: #f5f6fa;
+  --color-text-primary: #0d213f;
+
+  --color-nav-link-hover: var(--color-green);
+}
+
+[data-theme="dark"] {
+  --color-bg-surface: #ffffff;
+  --color-bg: #f5f6fa;
+  --color-text-primary: #0d213f;
+
+  --color-nav-link-hover: var(--color-green);
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/arimo/Arimo-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/arimo/Arimo-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/arimo/Arimo-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/arimo/Arimo-Regular.ttf") format("truetype");
+}
+
+@theme {
+  --font-display: "Arimo", sans-serif;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-surface: var(--color-bg-surface);
+
+  --color-nav-link-hover: var(--color-nav-link-hover);
+}
