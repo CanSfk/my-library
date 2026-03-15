@@ -1,21 +1,24 @@
 @import "tailwindcss";
 
 :root {
+  --color-white: #ffffff;
+  --color-gray: #f5f6fa;
   --color-green: #40916c;
+  --color-dark: #0d213f;
 
-  --color-bg-surface: #ffffff;
-  --color-bg: #f5f6fa;
-  --color-text-primary: #0d213f;
+  --bg: var(--color-gray);
+  --bg-surface: var(--color-white);
+  --nav-link-hover: var(--color-green);
+  --text-primary: var(--color-dark);
+  --btn-primary: var(--color-dark);
+  --btn-primary-hover: var(--color-dark-soft);
+  --btn-outline-primary: var(--color-gray);
+  --btn-outline-primary-hover: var(--color-dark);
 
-  --color-nav-link-hover: var(--color-green);
+  --icon-primary: var(--color-green);
 }
 
 [data-theme="dark"] {
-  --color-bg-surface: #ffffff;
-  --color-bg: #f5f6fa;
-  --color-text-primary: #0d213f;
-
-  --color-nav-link-hover: var(--color-green);
 }
 
 @font-face {
@@ -55,8 +58,39 @@
 }
 
 @theme inline {
-  --color-bg: var(--color-bg);
-  --color-bg-surface: var(--color-bg-surface);
+  --color-bg: var(--bg);
+  --color-bg-surface: var(--bg-surface);
 
-  --color-nav-link-hover: var(--color-nav-link-hover);
+  --color-nav-link-hover: var(--nav-link-hover);
+
+  --color-text-primary: var(--text-primary);
+
+  --color-btn-primary: var(--btn-primary);
+  --color-btn-primary-hover: var(--btn-primary-hover);
+  --color-btn-outline-primary: var(--btn-outline-primary);
+  --color-btn-outline-primary-hover: var(--btn-outline-primary-hover);
+  --color-icon-primary: var(--icon-primary);
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 300ms background-color ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+}
+
+/* Opacity Animations */
+.custom-opacity-animate-200 {
+  animation: opacityAnimate200 200ms ease forwards;
+}
+
+@keyframes opacityAnimate200 {
+  to {
+    opacity: 100%;
+  }
 }

@@ -1,2 +1,2 @@
-export * from "./home.jsx";
-export * from "./my-library.jsx";
+export * from "./home";
+export * from "./my-library";
