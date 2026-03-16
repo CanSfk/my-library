@@ -79,7 +79,7 @@ const SliderContent = ({ imgName, title, desc, theme, ticket }) => {
     <div className="flex gap-8 h-full">
       <div className="relative min-w-[200px] h-full bg-black rounded-xl overflow-hidden">
         <img
-          src={`../../../public/images/${imgName}`}
+          src={`/images/${imgName}`}
           alt={title}
           className="absolute left-0 top-0 w-full h-full object-cover"
         />
