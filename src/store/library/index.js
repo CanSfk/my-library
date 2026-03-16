@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  library: JSON.parse(localStorage.getItem("library")) || [],
+  library: JSON.parse(localStorage.getItem("library")) || [
+    { bookId: 1, readStatus: 1, note: "Notum" },
+    { bookId: 3, readStatus: 3, note: "Notum" },
+  ],
 };
 
 const librarySlice = createSlice({
