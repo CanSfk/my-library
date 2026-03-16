@@ -19,7 +19,7 @@ export const BookItem = ({
   return (
     <div className="relative h-[380px] w-full bg-black rounded-xl overflow-hidden group">
       <img
-        src={`../../../public/images/${imgName}`}
+        src={`/images/${imgName}`}
         alt={title}
         className="absolute left-0 top-0 w-full h-full object-cover"
       />
